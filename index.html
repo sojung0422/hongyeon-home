@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="ko" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="google" content="notranslate">
+<title>홍연 紅緣 — 사주로 이어지는 붉은 실</title>
+<meta name="description" content="태어난 순간 새끼손가락에 묶인 붉은 실. 홍연은 사주 궁합과 취향으로 단 한 사람과의 인연을 이어드려요.">
+<meta property="og:title" content="홍연 紅緣 — 사주로 이어지는 붉은 실">
+<meta property="og:description" content="사주 궁합, 운명의 짝 단 한 명, 가까워지면 조용히 울리는 알림.">
+<meta property="og:image" content="img/scene-match.webp">
+<meta name="theme-color" content="#FBF7F4">
+<link rel="icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@500;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBF7F4; --bg2:#F4EDE9; --card:#FFFFFF; --ink:#1C1219; --muted:#5F5562; --dim:#8E8591; --line:rgba(31,15,36,.09);
+  --thread:#E01E3C; --thread-soft:rgba(224,30,60,.08); --gold:#A9720C; --shadow:0 30px 60px -30px rgba(80,20,40,.28), 0 8px 20px -10px rgba(80,20,40,.12);
+  --display:'Hahmlet',serif; --body:'IBM Plex Sans KR',system-ui,sans-serif; --r:28px; --wrap:1160px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#150B17; --bg2:#1F0F24; --card:#2A1630; --ink:#F7ECF1; --muted:#C9B4CC; --dim:#9A82A0; --line:rgba(247,236,241,.10);
+  --thread:#F0294A; --thread-soft:rgba(240,41,74,.14); --gold:#EDB653; --shadow:0 30px 60px -30px rgba(0,0,0,.6);
+}}
+:root[data-theme="dark"]{--bg:#150B17;--bg2:#1F0F24;--card:#2A1630;--ink:#F7ECF1;--muted:#C9B4CC;--dim:#9A82A0;--line:rgba(247,236,241,.10);--thread:#F0294A;--thread-soft:rgba(240,41,74,.14);--gold:#EDB653;--shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;word-break:keep-all}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.02em;line-height:1.22}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.18em;color:var(--thread);text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;gap:10px;height:56px;padding:0 28px;border-radius:999px;font-weight:700;font-size:16px;transition:transform .2s, box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-red{background:var(--thread);color:#fff;box-shadow:0 14px 30px -12px rgba(224,30,60,.6)}
+.btn-ghost{border:1.5px solid var(--line);background:var(--card)}
+
+/* 상단 */
+.nav{position:fixed;inset:0 0 auto;z-index:20;transition:background .3s, box-shadow .3s}
+.nav.solid{background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:var(--display);font-weight:800;font-size:24px;display:flex;align-items:baseline;gap:8px}
+.logo span{color:var(--thread);font-size:16px;font-weight:700}
+.nav-links{display:flex;gap:28px;font-size:15px;color:var(--muted)}
+.nav-links a:hover{color:var(--ink)}
+.nav .btn{height:44px;padding:0 20px;font-size:15px}
+@media (max-width:820px){.nav-links{display:none}}
+
+/* 첫 화면 */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;padding:110px 0 80px;
+  background:radial-gradient(1200px 600px at 75% 40%,var(--thread-soft),transparent 60%),var(--bg)}
+#thread3d{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+@media (max-width:900px){#thread3d{opacity:.45}}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;width:100%}
+.hero h1{font-size:clamp(40px,6.2vw,78px)}
+.hero h1 em{font-style:normal;color:var(--thread)}
+.hero p.lead{margin-top:22px;font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:30em}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero .meta{margin-top:22px;font-size:14px;color:var(--dim)}
+.stage{position:relative;aspect-ratio:1/1;perspective:1200px}
+.float{position:absolute;filter:drop-shadow(0 30px 30px rgba(80,20,40,.22));will-change:transform}
+.float img{width:100%}
+.f-cat{width:46%;left:8%;top:30%}
+.f-deer{width:44%;right:4%;top:14%}
+.f-egg{width:22%;left:44%;bottom:4%}
+.f-coin{width:13%;left:6%;top:6%}
+.f-fox{width:20%;right:10%;bottom:12%}
+@keyframes bob{0%,100%{transform:translate3d(0,0,0) rotate(var(--rot,0deg))}50%{transform:translate3d(0,-16px,0) rotate(calc(var(--rot,0deg) * -1))}}
+.float>img{animation:bob 6s ease-in-out infinite}
+.f-deer>img{animation-delay:-2s;--rot:2deg}.f-egg>img{animation-delay:-4s;--rot:-4deg}.f-coin>img{animation-duration:5s;--rot:8deg}.f-fox>img{animation-delay:-1s}
+.scroll-cue{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);font-size:12px;letter-spacing:.2em;color:var(--dim);z-index:2}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.stage{max-width:520px;margin:0 auto;width:100%}}
+
+/* 공통 섹션 */
+section{padding:120px 0;position:relative}
+.head{max-width:720px;margin-bottom:56px}
+.head h2{font-size:clamp(32px,4.2vw,52px);margin-top:12px}
+.head p{margin-top:16px;color:var(--muted);font-size:18px}
+.center{text-align:center;margin-left:auto;margin-right:auto}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.on{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+/* 세 가지 */
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tile{position:relative;background:var(--card);border-radius:var(--r);padding:34px 30px 30px;box-shadow:var(--shadow);border:1px solid var(--line);transform-style:preserve-3d;transition:transform .25s}
+.tile .art{height:150px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;transform:translateZ(40px)}
+.tile .art img{height:100%;width:auto;filter:drop-shadow(0 20px 20px rgba(80,20,40,.2))}
+.tile h3{font-size:24px}
+.tile p{color:var(--muted);margin-top:10px;font-size:16px}
+.tile .num{position:absolute;top:22px;right:26px;font-family:var(--display);font-size:15px;color:var(--dim)}
+@media (max-width:900px){.three{grid-template-columns:1fr}}
+
+/* 운명의 실 % */
+.score{background:var(--bg2)}
+.score .grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.mock{perspective:1400px;display:flex;justify-content:center}
+.card3d{width:min(360px,86vw);aspect-ratio:3/4.3;border-radius:34px;background:linear-gradient(160deg,#2A1630,#120A10);position:relative;overflow:hidden;box-shadow:0 60px 80px -40px rgba(60,10,30,.55);transform:rotateY(-14deg) rotateX(6deg);transition:transform .2s;color:#fff}
+.card3d .veil{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:40px}
+.card3d .veil img{width:82%;filter:drop-shadow(0 30px 30px rgba(0,0,0,.4))}
+.card3d .pct{position:absolute;top:22px;right:22px;background:var(--thread);border-radius:18px;padding:10px 14px;text-align:center;line-height:1.1;box-shadow:0 10px 30px -8px rgba(224,30,60,.7);transform:translateZ(60px)}
+.card3d .pct small{display:block;font-size:12px;opacity:.85}
+.card3d .pct b{font-family:var(--display);font-size:32px}
+.card3d .foot{position:absolute;left:0;right:0;bottom:0;padding:26px;background:linear-gradient(transparent,rgba(18,10,16,.92))}
+.card3d .foot h4{font-family:var(--display);font-size:28px}
+.card3d .chips{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.card3d .chips span{font-size:13px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14)}
+.card3d .chips span.r{background:rgba(224,30,60,.85)}
+.bars{display:grid;gap:18px;margin-top:10px}
+.bar{display:grid;gap:8px}
+.bar .t{display:flex;justify-content:space-between;font-weight:600}
+.bar .t span{color:var(--thread);font-family:var(--display)}
+.bar .track{height:12px;border-radius:99px;background:var(--line);overflow:hidden}
+.bar .fill{height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#ff6a7f,var(--thread));transition:width 1.4s cubic-bezier(.2,.7,.2,1)}
+.on .bar .fill{width:var(--w)}
+.bar small{color:var(--muted);font-size:14px}
+@media (max-width:900px){.score .grid{grid-template-columns:1fr;gap:40px}}
+
+/* 캐릭터 */
+.chars{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.char{background:var(--card);border-radius:24px;padding:22px 14px 18px;text-align:center;border:1px solid var(--line);transition:transform .3s, box-shadow .3s}
+.char:hover{transform:translateY(-8px) rotate(-1deg);box-shadow:var(--shadow)}
+.char img{width:100%;aspect-ratio:1;object-fit:contain;filter:drop-shadow(0 16px 16px rgba(80,20,40,.18))}
+.char b{display:block;font-family:var(--display);font-size:20px;margin-top:8px}
+.char small{color:var(--dim);font-size:13px}
+.grow{margin-top:56px;display:flex;align-items:flex-end;justify-content:center;gap:clamp(8px,3vw,40px);flex-wrap:wrap}
+.grow figure{text-align:center}
+.grow img{height:clamp(70px,12vw,150px);width:auto;filter:drop-shadow(0 16px 16px rgba(80,20,40,.18))}
+.grow figcaption{font-size:14px;color:var(--muted);margin-top:6px}
+.grow .arrow{font-family:var(--display);color:var(--thread);font-size:24px;padding-bottom:40px}
+@media (max-width:900px){.chars{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:520px){.chars{grid-template-columns:repeat(2,1fr)}}
+
+/* 장면 */
+.split{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
+.split.rev{grid-template-columns:1fr 1.1fr}
+.split.rev .media{order:2}
+.media img{width:100%;filter:drop-shadow(0 40px 40px rgba(80,20,40,.2))}
+.list{display:grid;gap:14px;margin-top:26px}
+.list li{list-style:none;display:flex;gap:12px;align-items:flex-start;color:var(--muted)}
+.list li::before{content:'';flex:none;width:10px;height:10px;border-radius:50%;background:var(--thread);margin-top:9px;box-shadow:0 0 0 5px var(--thread-soft)}
+.list b{color:var(--ink)}
+@media (max-width:900px){.split,.split.rev{grid-template-columns:1fr}.split.rev .media{order:0}}
+
+/* 목적 */
+.purpose{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pp{border-radius:var(--r);padding:30px;background:var(--card);border:1px solid var(--line);position:relative;overflow:hidden}
+.pp img{width:120px;height:120px;object-fit:contain;margin-bottom:12px;filter:drop-shadow(0 14px 14px rgba(80,20,40,.18))}
+.pp h3{font-size:26px}
+.pp p{color:var(--muted);margin-top:8px;font-size:16px}
+.pp.gold{border-color:var(--gold)}
+@media (max-width:900px){.purpose{grid-template-columns:1fr}}
+
+/* 안전 */
+.safe{background:var(--bg2)}
+.safe-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sf{background:var(--card);border-radius:24px;padding:26px 22px;border:1px solid var(--line)}
+.sf img{width:72px;height:72px;object-fit:contain;margin-bottom:10px}
+.sf h3{font-size:19px}
+.sf p{color:var(--muted);font-size:15px;margin-top:6px}
+@media (max-width:900px){.safe-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.safe-grid{grid-template-columns:1fr}}
+
+/* 요금 */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.plan{border-radius:var(--r);padding:32px 28px;background:var(--card);border:1.5px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.plan.hot{border-color:var(--thread);box-shadow:var(--shadow);transform:translateY(-8px)}
+.plan.gold{border-color:var(--gold)}
+.plan h3{font-size:24px}
+.plan .price{font-family:var(--display);font-size:36px;font-weight:800}
+.plan .price small{font-size:15px;color:var(--dim);font-family:var(--body);font-weight:500}
+.plan ul{display:grid;gap:8px;color:var(--muted);font-size:15px}
+.plan li{list-style:none;padding-left:22px;position:relative}
+.plan li::before{content:'✓';position:absolute;left:0;color:var(--thread);font-weight:700}
+.coins{margin-top:22px;display:flex;align-items:center;gap:18px;padding:20px 24px;border-radius:24px;background:var(--card);border:1px solid var(--line)}
+.coins img{width:64px;height:64px;object-fit:contain}
+.coins p{color:var(--muted);font-size:15px}
+@media (max-width:900px){.plans{grid-template-columns:1fr}.plan.hot{transform:none}}
+
+/* 질문 */
+.faq{max-width:820px;margin:0 auto;display:grid;gap:12px}
+details{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px 24px}
+summary{cursor:pointer;font-weight:700;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:'+';color:var(--thread);font-size:22px;line-height:1;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);margin-top:12px;font-size:16px}
+
+/* 마지막 */
+.final{text-align:center;overflow:hidden}
+.final .art{width:min(640px,100%);margin:0 auto 10px}
+.final h2{font-size:clamp(34px,5vw,60px)}
+.final p{color:var(--muted);margin:16px auto 32px;max-width:32em}
+footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--dim);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+@media (prefers-reduced-motion:reduce){.float>img{animation:none}.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">홍연<span>紅緣</span></a>
+    <nav class="nav-links">
+      <a href="#how">소개</a><a href="#score">운명의 실</a><a href="#chars">캐릭터</a><a href="#safe">안전</a><a href="#plans">요금</a>
+    </nav>
+    <a class="btn btn-red" href="https://sojung0422.github.io/hongyeon/">시작하기</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <canvas id="thread3d" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Red thread of fate</p>
+        <h1 style="margin-top:16px">태어난 순간,<br>당신의 새끼손가락에는<br><em>붉은 실</em>이 묶여 있었어요.</h1>
+        <p class="lead">홍연은 사주 궁합과 취향으로 그 실의 끝에 있는 단 한 사람을 찾아드려요. 가까워지면, 어디인지는 숨긴 채 조용히 알려드릴게요.</p>
+        <div class="ctas">
+          <a class="btn btn-red" href="https://sojung0422.github.io/hongyeon/">웹에서 내 실 따라가기 →</a>
+          <a class="btn btn-ghost" href="#how">어떻게 이어지나요</a>
+        </div>
+        <p class="meta">만 19세 이상 · 휴대폰 본인인증 · 위치는 동네 단위로만</p>
+      </div>
+      <div class="stage" id="stage" aria-hidden="true">
+        <div class="float f-coin" data-depth="1.6"><img src="img/coin.webp" alt=""></div>
+        <div class="float f-deer" data-depth="0.8"><img src="img/adult-wood.webp" alt=""></div>
+        <div class="float f-cat" data-depth="1.2"><img src="img/adult-metal.webp" alt=""></div>
+        <div class="float f-fox" data-depth="1.8"><img src="img/adult-fire.webp" alt=""></div>
+        <div class="float f-egg" data-depth="2.2"><img src="img/egg-metal.webp" alt=""></div>
+      </div>
+    </div>
+    <div class="scroll-cue">SCROLL</div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">How it works</p>
+        <h2>스와이프는 가볍게,<br>인연은 깊게.</h2>
+        <p>익숙한 스와이프로 마음 가는 사람을 고르고, 사주가 가장 깊게 닿은 한 사람과는 붉은 실이 따로 이어져요.</p>
+      </div>
+      <div class="three">
+        <article class="tile tilt reveal d1"><span class="num">01</span>
+          <div class="art"><img src="img/explore-element.webp" alt=""></div>
+          <h3>사주로 맞춰 보는 궁합</h3>
+          <p>생년월일과 태어난 시간으로 네 기둥을 세우고, 오행·천간합·육합까지 따져 궁합 점수와 그 이유를 카드마다 보여드려요.</p>
+        </article>
+        <article class="tile tilt reveal d2"><span class="num">02</span>
+          <div class="art"><img src="img/fate-veil-metal.webp" alt=""></div>
+          <h3>단 한 명, 운명의 짝</h3>
+          <p>궁합이 가장 깊은 한 사람과만 붉은 실이 이어져요. 얼굴과 이름은 처음 만나는 날까지 가려 둬요.</p>
+        </article>
+        <article class="tile tilt reveal d3"><span class="num">03</span>
+          <div class="art"><img src="img/scene-match.webp" alt=""></div>
+          <h3>가까워지면 실이 팽팽하게</h3>
+          <p>운명의 짝이 내 동네 5km 안에 들어오면 한 번 울려요. 반경도 위치도 보이지 않아요. 우연처럼 만나도록.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="score" id="score">
+    <div class="wrap grid">
+      <div class="mock reveal">
+        <div class="card3d" id="card3d">
+          <div class="veil"><img src="img/adult-water.webp" alt="물수달 캐릭터"></div>
+          <div class="pct"><small>운명의 실</small><b>87%</b></div>
+          <div class="foot">
+            <h4>윤슬 <span style="font-size:20px;opacity:.8">28</span></h4>
+            <div style="opacity:.85;font-size:15px">壬子일주 · 성수동</div>
+            <div class="chips"><span class="r">사주 궁합 92%</span><span>같이 좋아해요 · 재즈</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal d2" id="bars">
+        <p class="eyebrow">Thread score</p>
+        <h2 style="font-size:clamp(30px,3.8vw,46px);margin-top:12px">운명의 실 %는<br>이렇게 정해져요</h2>
+        <div class="bars" style="margin-top:30px">
+          <div class="bar"><div class="t">사주 궁합 <span>50%</span></div><div class="track"><div class="fill" style="--w:100%"></div></div><small>일간의 합·상생, 배우자 자리의 육합과 충, 서로 없는 기운을 채워주는지</small></div>
+          <div class="bar"><div class="t">같이 좋아하는 것 <span>30%</span></div><div class="track"><div class="fill" style="--w:60%"></div></div><small>취향·가치관 태그가 몇 개 겹치는지</small></div>
+          <div class="bar"><div class="t">원하는 조건 <span>20%</span></div><div class="track"><div class="fill" style="--w:40%"></div></div><small>나이, 키, 흡연, 끌리는 분위기</small></div>
+        </div>
+        <p style="color:var(--muted);margin-top:24px;font-size:15px">사주 전문 궁합, MBTI 궁합, 싸울 때·좋을 때 같은 상황별 궁합은 엽전으로 더 자세히 볼 수 있어요.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="chars">
+    <div class="wrap">
+      <div class="head center reveal" style="text-align:center">
+        <p class="eyebrow">Five elements</p>
+        <h2>내 사주가 깨우는<br>나만의 첫 캐릭터</h2>
+        <p>태어난 날의 기운(일간)에 따라 다섯 친구 중 하나가 알에서 깨어나요. 커플이 되면 두 캐릭터가 함께 새 알을 품어요.</p>
+      </div>
+      <div class="chars">
+        <div class="char reveal d1"><img src="img/adult-wood.webp" alt="숲사슴"><b>숲사슴</b><small>목 木 · 꾸준하고 다정한</small></div>
+        <div class="char reveal d2"><img src="img/adult-fire.webp" alt="불여우"><b>불여우</b><small>화 火 · 밝고 솔직한</small></div>
+        <div class="char reveal d3"><img src="img/adult-earth.webp" alt="흙곰"><b>흙곰</b><small>토 土 · 든든하고 품 넓은</small></div>
+        <div class="char reveal d4"><img src="img/adult-metal.webp" alt="은빛 고양이"><b>은빛 고양이</b><small>금 金 · 기준이 분명한</small></div>
+        <div class="char reveal d4"><img src="img/adult-water.webp" alt="물수달"><b>물수달</b><small>수 水 · 유연하고 눈치 빠른</small></div>
+      </div>
+      <div class="grow reveal">
+        <figure><img src="img/egg-metal.webp" alt=""><figcaption>알</figcaption></figure><span class="arrow">→</span>
+        <figure><img src="img/cracked-metal.webp" alt=""><figcaption>톡톡, 깨어나는 중</figcaption></figure><span class="arrow">→</span>
+        <figure><img src="img/baby-metal.webp" alt=""><figcaption>아기</figcaption></figure><span class="arrow">→</span>
+        <figure><img src="img/kid-metal.webp" alt=""><figcaption>꼬마</figcaption></figure><span class="arrow">→</span>
+        <figure><img src="img/adult-metal.webp" alt=""><figcaption>다 자란 모습</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split">
+      <div class="media reveal"><img src="img/scene-egg-pair.webp" alt="두 캐릭터가 함께 알을 품은 모습"></div>
+      <div class="reveal d2">
+        <p class="eyebrow">Quests & couples</p>
+        <h2 style="font-size:clamp(30px,3.8vw,46px);margin-top:12px">만나기 전엔 퀘스트로,<br>만난 뒤엔 둘만의 알로</h2>
+        <ul class="list">
+          <li><span><b>붉은 실 퀘스트</b> — 오늘의 질문, 동네 산책, 노을 사진처럼 앱 안팎에서 하는 퀘스트로 실을 또렷하게 만들어요.</span></li>
+          <li><span><b>모든 건 둘 다 눌러야</b> — 매칭도, 첫 만남 인증도, 커플 인증도 두 사람이 모두 눌러야 이어져요.</span></li>
+          <li><span><b>커플이 되면 연리지로</b> — 두 캐릭터가 함께 알을 품고, 사진·영상 퀘스트로 추억을 남길수록 자라요.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:40px">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Why are you here</p>
+        <h2>친구도, 연애도, 결혼도.<br>같은 마음끼리만.</h2>
+        <p>찾는 인연이 하나라도 겹치는 사람끼리만 서로 보여요. 여러 개 골라도 괜찮아요.</p>
+      </div>
+      <div class="purpose">
+        <div class="pp reveal d1"><img src="img/explore-tastes.webp" alt=""><h3>친구</h3><p>동네 친구, 운동 메이트, 맛집 메이트. 외모보다 취향과 동네 위주로 이어드려요.</p></div>
+        <div class="pp reveal d2"><img src="img/explore-same-goal.webp" alt=""><h3>연애</h3><p>설레는 사람부터 오래 만날 사람까지. 원하는 연애의 결이 같은 사람을 먼저 보여드려요.</p></div>
+        <div class="pp gold reveal d3"><img src="img/explore-family.webp" alt=""><h3>결혼</h3><p>결혼 시기, 자녀, 양가 부모, 경제관까지 미리 맞춰 봐요. 돈·정치·스킨십 답은 서로에게 보이지 않고 맞는지만 계산해요.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="safe" id="safe">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Safety first</p>
+        <h2>설렘은 크게,<br>걱정은 작게.</h2>
+      </div>
+      <div class="safe-grid">
+        <div class="sf reveal d1"><img src="img/rule-real.webp" alt=""><h3>본인인증과 얼굴 인증</h3><p>휴대폰 본인인증으로 만 19세 이상만. 셀카로 사진 속 사람이 본인인지 확인해요.</p></div>
+        <div class="sf reveal d2"><img src="img/rule-safe.webp" alt=""><h3>지인 피하기</h3><p>연락처의 지인과는 서로 보이지 않아요. 번호는 휴대폰 안에서 암호값으로만 비교해요.</p></div>
+        <div class="sf reveal d3"><img src="img/rule-respect.webp" alt=""><h3>스캠 주의 알림</h3><p>대화에 송금·투자·외부 메신저 이야기가 나오면 바로 주의 문구를 띄워요.</p></div>
+        <div class="sf reveal d4"><img src="img/rule-report.webp" alt=""><h3>신고와 영구 정지</h3><p>신고는 상대에게 알리지 않아요. 사실로 확인되면 본인인증 정보로 재가입까지 막아요.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="plans">
+    <div class="wrap">
+      <div class="head center reveal" style="text-align:center">
+        <p class="eyebrow">Plans</p>
+        <h2>붉은 실은 언제나 무료</h2>
+        <p>매칭, 대화, 운명의 짝은 모두 무료예요. 더 빨리, 더 많이 알고 싶을 때만 골라 쓰세요.</p>
+      </div>
+      <div class="plans">
+        <div class="plan reveal d1"><h3>무료</h3><div class="price">₩0</div>
+          <ul><li>하루 추천 카드 30장</li><li>운명의 짝과 붉은 실 퀘스트</li><li>매칭과 대화</li><li>사주 궁합 점수와 이유</li></ul></div>
+        <div class="plan hot reveal d2"><h3>홍연 플러스</h3><div class="price">₩9,900<small> / 월</small></div>
+          <ul><li>추천 카드 무제한</li><li>되돌리기 무제한</li><li>매달 엽전 10개</li><li>해외·다른 지역 추천</li></ul></div>
+        <div class="plan gold reveal d3"><h3>홍연 금실</h3><div class="price">₩19,900<small> / 월</small></div>
+          <ul><li>플러스의 모든 혜택</li><li>나를 좋아한 사람 모두 보기</li><li>매달 엽전 25개</li><li>자세한 궁합 한 달 5명 무료</li></ul></div>
+      </div>
+      <div class="coins reveal"><img src="img/coin-pouch.webp" alt=""><p><b style="color:var(--ink)">엽전으로 하는 것</b> — 붉은 매듭(슈퍼라이크), 등불(30분 부스트), 먼저 말 걸기, 운명의 짝 힌트, 자세한 궁합. 매일 출석하면 1개씩 받아요.</p></div>
+    </div>
+  </section>
+
+  <section style="padding-top:20px">
+    <div class="wrap">
+      <div class="head center reveal" style="text-align:center"><p class="eyebrow">FAQ</p><h2>자주 묻는 질문</h2></div>
+      <div class="faq">
+        <details class="reveal"><summary>태어난 시간을 몰라도 되나요?</summary><p>괜찮아요. 시간을 모르면 연·월·일 세 기둥으로 궁합을 봐요. 아는 만큼만 더 정확해져요.</p></details>
+        <details class="reveal"><summary>제 위치가 상대에게 보이나요?</summary><p>아니요. 홍연은 GPS를 쓰지 않고, 직접 고른 동네만으로 거리를 계산해요. 알림 반경과 상대 위치는 누구에게도 보이지 않아요.</p></details>
+        <details class="reveal"><summary>운명의 짝은 돈을 내야 볼 수 있나요?</summary><p>아니요. 운명의 짝과 붉은 실 퀘스트는 무료예요. 얼굴과 이름은 처음 만나는 날 두 사람 모두에게 공개돼요.</p></details>
+        <details class="reveal"><summary>사주 궁합은 얼마나 믿을 만한가요?</summary><p>전통 명리 이론을 단순하게 옮긴 재미와 참고용 정보예요. 사람의 마음은 직접 만나서 알아가 주세요.</p></details>
+        <details class="reveal"><summary>앱은 어디서 받나요?</summary><p>지금은 웹에서 바로 써볼 수 있고, 휴대폰 홈 화면에 추가하면 앱처럼 쓸 수 있어요. 구글 플레이와 앱스토어 출시를 준비하고 있어요.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <img class="art reveal" src="img/scene-match.webp" alt="붉은 실로 이어진 두 캐릭터">
+      <h2 class="reveal">당신의 실 끝에는<br>누가 있을까요?</h2>
+      <p class="reveal">생년월일만 넣으면 내 사주와 첫 캐릭터를 바로 볼 수 있어요.</p>
+      <a class="btn btn-red reveal" href="https://sojung0422.github.io/hongyeon/">내 실 따라가기 →</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 홍연 紅緣 · 사주 궁합은 재미와 참고용 정보예요.</span>
+    <span>이용약관 · 개인정보처리방침 · 문의</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // 스크롤하면 나타나기
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { threshold: .18 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // 상단 바
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('solid', scrollY > 40);
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // 마우스를 따라 떠 있는 캐릭터와 카드가 기울어진다
+  const stage = document.getElementById('stage');
+  const floats = [...document.querySelectorAll('.float')];
+  const tilt = (el, x, y, max) => { el.style.transform = `rotateY(${x * max}deg) rotateX(${-y * max}deg)`; };
+  if (!reduce) {
+    addEventListener('pointermove', e => {
+      const x = e.clientX / innerWidth - .5, y = e.clientY / innerHeight - .5;
+      floats.forEach(f => { const d = +f.dataset.depth; f.style.transform = `translate3d(${x * -30 * d}px, ${y * -24 * d}px, 0)`; });
+    }, { passive: true });
+    document.querySelectorAll('.tilt').forEach(t => {
+      t.addEventListener('pointermove', e => { const r = t.getBoundingClientRect(); tilt(t, (e.clientX - r.left) / r.width - .5, (e.clientY - r.top) / r.height - .5, 10); });
+      t.addEventListener('pointerleave', () => { t.style.transform = ''; });
+    });
+    const card = document.getElementById('card3d');
+    card.parentElement.addEventListener('pointermove', e => { const r = card.getBoundingClientRect(); const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; card.style.transform = `rotateY(${x * 22}deg) rotateX(${-y * 16}deg)`; });
+    card.parentElement.addEventListener('pointerleave', () => { card.style.transform = ''; });
+  }
+
+  // 첫 화면의 3D 붉은 실: 화면을 가로질러 한 번 감기는 실이 그려지고 천천히 흔들린다
+  const canvas = document.getElementById('thread3d');
+  if (!window.THREE) return;
+  let renderer;
+  try { renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true }); } catch { return; }
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(35, 1, .1, 100);
+  camera.position.set(0, 0, 12);
+
+  // 글자 아래로 흘러 들어와 캐릭터 쪽에서 한 번 감기고 오른쪽 위로 빠져나간다
+  const pts = [
+    [-10, -4.6, -2], [-6, -4.2, 0], [-2, -3.6, 1], [1.2, -2.4, 0.6], [2.6, -0.4, -0.4], [2.2, 1.6, 0.8],
+    [3.6, 2.4, -0.6], [4.4, 0.8, 0.8], [3.2, 0.2, 0.2], [5.4, 1.4, -0.6], [7.4, 2.8, -1], [10, 3.6, -2],
+].map(p => new THREE.Vector3(...p));
+  const curve = new THREE.CatmullRomCurve3(pts, false, 'catmullrom', .5);
+  const geo = new THREE.TubeGeometry(curve, 600, .055, 16, false);
+  const mat = new THREE.MeshPhysicalMaterial({ color: 0xE01E3C, roughness: .38, metalness: .05, clearcoat: .6, clearcoatRoughness: .3 });
+  const tube = new THREE.Mesh(geo, mat);
+  const glowMat = new THREE.MeshBasicMaterial({ color: 0xE01E3C, transparent: true, opacity: .1 });
+  const glow = new THREE.Mesh(new THREE.TubeGeometry(curve, 300, .2, 12, false), glowMat);
+  const group = new THREE.Group(); group.add(glow, tube); scene.add(group);
+
+  scene.add(new THREE.HemisphereLight(0xfff4ee, 0x553344, 1.1));
+  const key = new THREE.DirectionalLight(0xffffff, 1.4); key.position.set(-4, 6, 8); scene.add(key);
+  const rim = new THREE.PointLight(0xff8899, 1.2, 30); rim.position.set(4, -2, 4); scene.add(rim);
+
+  const total = geo.index.count;
+  const glowTotal = glow.geometry.index.count;
+  const resize = () => {
+    const w = canvas.clientWidth, h = canvas.clientHeight;
+    renderer.setSize(w, h, false); camera.aspect = w / h;
+    camera.position.z = w < 700 ? 16 : 12; group.position.x = w < 700 ? -2 : 0; camera.updateProjectionMatrix();
+  };
+  addEventListener('resize', resize); resize();
+
+  let mx = 0, my = 0;
+  addEventListener('pointermove', e => { mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5; }, { passive: true });
+  const start = performance.now();
+  const loop = now => {
+    const t = (now - start) / 1000;
+    const p = reduce ? 1 : Math.min(1, t / 2.4);
+    const ease = 1 - Math.pow(1 - p, 3);
+    geo.setDrawRange(0, Math.floor(total * ease / 3) * 3);
+    glow.geometry.setDrawRange(0, Math.floor(glowTotal * ease / 3) * 3);
+    group.rotation.y += ((reduce ? 0 : mx * .5 + Math.sin(t * .4) * .08) - group.rotation.y) * .05;
+    group.rotation.x += ((reduce ? 0 : my * .3) - group.rotation.x) * .05;
+    group.position.y = Math.sin(t * .8) * .08 - scrollY * .004;
+    renderer.render(scene, camera);
+    requestAnimationFrame(loop);
+  };
+  requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
